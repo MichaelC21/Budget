@@ -127,3 +127,7 @@ Built for a single user (me). It would need real multi-tenancy work before anyon
 [wiki-extraction]: https://github.com/YOUR-USERNAME/BudgetApp/wiki/Receipt-Extraction
 [wiki-eval]: https://github.com/YOUR-USERNAME/BudgetApp/wiki/Evaluation-Harness
 [wiki-roadmap]: https://github.com/YOUR-USERNAME/BudgetApp/wiki/Roadmap
+
+
+## WIKI
+To learn more about this project, see the [wiki](https://github.com/MichaelC21/Budget/wiki)
