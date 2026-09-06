@@ -1,0 +1,23 @@
+name: Lint Workflow
+
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log commit message
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: echo "Checking commit '$COMMIT_MESSAGE'"
+
+      - uses: actions/checkout@v4
+
+      - name: Install actionlint
+        run: bash <(curl -fsSL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+
+      - name: Run actionlint
+        run: ./actionlint -color
