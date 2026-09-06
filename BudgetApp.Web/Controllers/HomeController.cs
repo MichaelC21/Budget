@@ -8,6 +8,8 @@ namespace BudgetApp.Controllers
     {
         public IActionResult Index()
         {
+            int i = 10;
+            const c
             return View();
         }
 
