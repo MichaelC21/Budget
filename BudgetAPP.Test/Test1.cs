@@ -6,7 +6,7 @@
         [TestMethod]
         public void TestAdd()
         {
-                        int expected = 6;
+                    int expected = 6;
             int actual = 2 + 4;
             Assert.AreEqual(expected, actual);
         }
