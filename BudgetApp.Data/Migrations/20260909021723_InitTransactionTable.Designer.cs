@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BudgetApp.Data.Migrations
 {
     [DbContext(typeof(BudgetDbContext))]
-    [Migration("20260909020443_InitTransactionTable")]
+    [Migration("20260909021723_InitTransactionTable")]
     partial class InitTransactionTable
     {
         /// <inheritdoc />
@@ -47,7 +47,8 @@ namespace BudgetApp.Data.Migrations
 
                     b.Property<string>("Currency")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -71,10 +72,13 @@ namespace BudgetApp.Data.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("TransactionID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Transactions");
                 });
