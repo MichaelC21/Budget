@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: TODO - describe when this agent should be invoked (e.g. "Use this agent to review code changes for correctness, style, and security before merging.")
+description: Use this agent to review the current branch's changes (diffed against its base branch) for correctness, EF Core query/migration safety, ASP.NET Core MVC security and hosting pitfalls, and test coverage before merging. It reads the diff plus surrounding context, runs build/test/format/EF migration checks, and produces a severity-ranked Markdown review report. It does not modify code.
 tools: Read, Grep, Glob, Bash
 model: inherit
 ---
