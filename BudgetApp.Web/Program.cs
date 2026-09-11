@@ -20,6 +20,7 @@ namespace BudgetApp
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<BudgetDbContext>();
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDataLayer();
 
             var app = builder.Build();
 

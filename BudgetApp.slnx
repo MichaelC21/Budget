@@ -1,5 +1,6 @@
 <Solution>
+  <Project Path="BudgetApp.Business/BudgetApp.Business.csproj" Id="30bf16b5-714f-4f33-b2fc-b905deaeed04" />
   <Project Path="BudgetApp.Data/BudgetApp.Data.csproj" Id="040055ea-942f-40e0-b859-2bb5785b4398" />
-  <Project Path="BudgetAPP.Test/BudgetAPP.Test.csproj" Id="252d7079-3609-4ad5-9539-d15bb918570c" DisplayName="BudgetApp.Test" />
+  <Project Path="BudgetAPP.Test/BudgetAPP.Test.csproj" Id="252d7079-3609-4ad5-9539-d15bb918570c" />
   <Project Path="BudgetApp.Web/BudgetApp.Web.csproj" />
 </Solution>
