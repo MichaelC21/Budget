@@ -12,7 +12,7 @@ namespace BudgetApp.Data.Services
 
         public decimal ConvertToDollars(int cents)
         {
-            return Math.Round(cents / 100m, 2);
+            return cents / 100m;
         }
 
         public string FormatCurrency(decimal amount, string currencySymbol = "$")

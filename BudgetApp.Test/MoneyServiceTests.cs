@@ -1,13 +1,16 @@
-﻿namespace BudgetAPP.Test
+﻿using Moq;
+using BudgetApp.Data.Services;
+
+namespace BudgetAPP.Test
 {
     [TestClass]
     public sealed class MoneyServiceTests
     {
-        Mock
+        
         [TestMethod]
         public void TestConvertToCents()
         {
-            var moneyService = new MoneyService();
+            MoneyService moneyService = new MoneyService();
             int expected = 250;
             int actual = moneyService.ConvertToCents(2.50m);
             Assert.AreEqual(expected, actual);
@@ -28,6 +31,16 @@
             var moneyService = new MoneyService();
             string expected = "$2.50";
             string actual = moneyService.FormatCurrency(2.50m);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestFormatCurrency_WithSymbol()
+        {
+            var moneyService = new MoneyService();
+            string expected = "€2.50";
+            string symbol = "€";
+            string actual = moneyService.FormatCurrency(2.50m, symbol);
             Assert.AreEqual(expected, actual);
         }
     }
